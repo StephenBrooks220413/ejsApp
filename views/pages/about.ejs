@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+
+<nav>
+    <%- include('../partials/header'); %>
+</nav>
+
+<div class="about"></div>
+
+<div class="space container">
+    <div class="row">
+        <div class="col-md">
+            <div class="jumbotron">
+                <h1 class="display-5">
+                    Embedded JavaScript Apps
+                </h1>
+                <p class="lead">
+                    Welcome to templating using EJS. Why use EJS? Well,
+                    for starters it runs fast and easier to scaffold with,
+                    making build time much shorter.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="well">
+                <h1 class="display-5">Information Being Requested</h1>
+                <h4>Requested Info From Server:</h4>
+                <p><%= tagline %></p>
+                <ul>
+                    <% mascots.forEach(function(mascot) { %>
+                        <li>
+                            <strong><%= mascot.name %></strong>
+                            representing <%= mascot.organization %>,
+                            born <%= mascot.birth_year %>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
+
+</body>
+</html>
